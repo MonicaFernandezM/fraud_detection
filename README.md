@@ -123,13 +123,13 @@ sino el que **minimiza el coste económico**.
 ## Dashboard
 
 ### Resultados del modelo
-![Confusion Matrix](images/confusion_matrix.png)
+![Confusion Matrix](confusion_matrix.png)
 
 ### Fraude por producto
-![Fraud by Product](images/fraud_product.png)
+![Fraud by Product](fraud_product.png)
 
 ### Fraude por tipo de tarjeta
-![Fraud by Card](images/fraud_card.png)
+![Fraud by Card](fraud_card.png)
 
 ## Contribución 
 
