@@ -10,18 +10,24 @@ A diferencia de un enfoque tradicional basado en métricas técnicas, este proye
 - ¿Cómo optimizar decisiones para reducir ese coste?
 
 ## Tabla de Contenidos
+- [Descripción](#descripción)
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Dataset](#dataset)
 - [Preguntas de Investigación](#preguntas-de-investigación)
 - [Análisis](#análisis)
 - [Resultados](#resultados)
+- [Conclusiones](#conclusiones)
+- [Dashboard](#dashboard)
 - [Contribución](#contribución)
+- [Autor](#autor)
 
 ## Instalación
 
 1. Clonar el repositorio:
-git clone https://github.com/MonicaFernandezM/fraud_detection
+```bash
+   git clone [https://github.com/MonicaFernandezM/fraud_detection](https://github.com/MonicaFernandezM/fraud_detection)
+```
 
 2. Instalar dependencias:
 pip install -r requirements.txt
@@ -34,15 +40,17 @@ streamlit run app7.py
 - Seleccionar filtros (producto, tipo de tarjeta)
 - Ajustar el **threshold del modelo**
 - Analizar:
-- Fraude detectado vs no detectado
-- Coste económico
-- Segmentos de mayor riesgo
+    - Fraude detectado vs no detectado
+    - Coste económico
+    - Segmentos de mayor riesgo
 
 El dashboard está diseñado para facilitar la **toma de decisiones basada en impacto económico**.
 
 ## Dataset
 
-El dataset contiene información de transacciones con variables como:
+El análisis integra datos de transacciones obtenidos de la competición de Kaggle [IEEE-Fraud-Detection](https://www.kaggle.com/competitions/ieee-fraud-detection). Los datos fueron limpiados y procesados previamente.
+
+Variables clave utilizadas:
 
 - Tipo de producto (ProductCD)
 - Tipo de tarjeta (card4)
@@ -50,8 +58,6 @@ El dataset contiene información de transacciones con variables como:
 - Variable objetivo (isFraud)
 
 Los datos han sido previamente limpiados y procesados para su análisis.
-
-- Descargar el dataset de: https://www.kaggle.com/competitions/ieee-fraud-detection
 
 ## Preguntas de Investigación
 
@@ -90,11 +96,10 @@ Coste total = (FN * 100€) + (FP * 5€)
 
 El threshold estándar no es óptimo desde el punto de vista de negocio.
 
-Al ajustarlo:
-
-- Se reduce el fraude no detectado  
-- Se optimiza el equilibrio entre fraude y alertas  
-- Se minimiza el coste total  
+Ajustar el umbral de decisión frente al estándar de Machine Learning permite:
+- Reducir drásticamente el fraude no detectado.
+- Equilibrar el volumen de falsas alertas.
+- Minimizar el coste económico total de la operación.
 
 ##### Segmentos de mayor riesgo:
 
@@ -109,6 +114,11 @@ Esto permite priorizar acciones de prevención.
 
 El mejor modelo no es el que tiene mejor AUC,  
 sino el que **minimiza el coste económico**.
+
+## Conclusiones
+- El mejor modelo no es el que maximiza el AUC, sino el que se alinea con la estrategia financiera del negocio minimizando costes.
+- La optimización del threshold basada en costes operativos y pérdidas directas aporta un valor empresarial muy superior a los umbrales de probabilidad por defecto (0.5).
+- La segmentación por producto y tipo de tarjeta permite enfocar los recursos de control antifraude de manera mucho más eficiente.
 
 ## Dashboard
 
@@ -128,11 +138,11 @@ Las contribuciones son bienvenidas.
 Si deseas mejorar el análisis o añadir funcionalidades:
 
 1. Haz un fork del repositorio  
-2. Crea una nueva rama  
-3. Realiza tus cambios  
+2. Crea una nueva rama (git checkout -b feature/mejora)
+3. Realiza tus cambios y haz commit (git commit -m 'Añadir mejora')  
 4. Abre un Pull Request  
 
 ## Autor
 
 Mónica Fernández  
-linkedin : www.linkedin.com/in/monicamfm  
+[linkedin](www.linkedin.com/in/monicamfm)
